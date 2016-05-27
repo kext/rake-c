@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.description = "This Gem can build small C programs."
   s.authors     = ["Lukas Joeressen"]
   s.email       = 'lukas@joeressen.net'
-  s.homepage    = 'https://github.com/kext'
+  s.homepage    = 'https://github.com/kext/rake-c'
   s.files       = [
     "lib/rake/c.rb"
   ]

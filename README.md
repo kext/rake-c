@@ -2,6 +2,27 @@
 
 This is a small plugin for Rake, which helps you build your C projects.
 
+## Installation
+
+Put this in your Gemfile
+
+```ruby
+# This is still pre-release, so we better use that exact version.
+gem 'rake-c', '0.0.1'
+```
+
+and do
+
+```text
+$ bundle install
+```
+
+Or just install it manually with
+
+```text
+$ gem install rake-c
+```
+
 ## Example
 
 ```ruby
