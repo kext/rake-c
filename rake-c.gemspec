@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'rake-c'
-  s.version     = '0.0.2'
+  s.version     = '0.0.3'
   s.date        = Time.now.strftime('%Y-%m-%d')
   s.summary     = "C Build System"
   s.description = "This Gem can build small C programs."

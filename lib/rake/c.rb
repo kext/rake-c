@@ -58,7 +58,7 @@ class C
     objects = Array.new
     files.each do |f|
       type = /\.[a-zA-Z0-9]+$/.match(f).to_s
-      if type == '.c' || type == '.cc' || type == '.cpp' || type == '.c++' || type == '.m' || type = '.mm' then
+      if type == '.c' || type == '.cc' || type == '.cpp' || type == '.c++' || type == '.m' || type == '.mm' then
         o = f.ext('.o')
         d = f.ext('.deps.rb')
         theobject = "#{@@builddir}/objects/#{name}/#{o}"
