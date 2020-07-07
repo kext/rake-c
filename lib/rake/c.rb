@@ -1,4 +1,5 @@
 require 'rake'
+require 'fileutils'
 
 class C
   @@cflags = '-Wall'
@@ -67,7 +68,7 @@ class C
         objects.push theobject
         Rake::FileTask.define_task theobject => [thesource] do
           puts "[CC] #{theobject}"
-          run "mkdir -p \"#{@@builddir}/objects/#{name}\""
+          FileUtils.mkdir_p "#{@@builddir}/objects/#{name}"
           xxx = run "#{@@compiler} #{cflags}#{@@libs} -M \"#{thesource}\""
           xx = []
           File.open(thedeps, 'w') do |f|
@@ -106,7 +107,7 @@ class C
         objects.push theobject
         Rake::FileTask.define_task theobject => [thesource] do
           puts "[CC] #{theobject}"
-          run "mkdir -p \"#{@@builddir}/objects\""
+          FileUtils.mkdir_p "#{@@builddir}/objects"
           xxx = run "#{@@compiler} #{cflags}#{@@libs} -M \"#{thesource}\""
           xx = []
           File.open(thedeps, 'w') do |f|
